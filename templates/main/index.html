@@ -3,50 +3,212 @@
 
 {% block content %}
 <div>
-    <div 
-        class="bg-cover "
-        style="background-image: url('/static/images/research.jpg')"
-    >
-    <div class="bg-white bg-opacity-80">
-        <div class="py-20 container mx-auto px-40 flex">
-            <img src="{% static 'images/logo.png' %}" class="h-48" alt="">
-            
-            <div class="ml-10 flex-1">
-                <h1 class="text-5xl font-bold">
-                    Международный научный журнал "Journal of Science and Research (JSR)"
-                </h1>
-                <ul class="my-5 text-gray-900">
-                    <li class="mb-2">
-                        Редакционная коллегия журнала приглашает опубликовать свои научные исследования 
-                        и труды в периодическом электронном журнале 
-                        «Journal of Science and Research»
-                    </li>
-                    <li class="mb-2">
-                        В журнале публикуются научные статьи фундаментального и 
-                        прикладного характера по актуальным вопросам современной науки, 
-                        способствуя тем самым распространению научных достижений в интернет 
-                        пространстве.
-                    </li>
-                    <li class="mb-2">
-                        Тематические направления журнала: Педагогические, 
-                        общественно-социальные, технические, экономические и юридические 
-                        науки, информационно-коммуникационные технологии, теоретические и 
-                        научно-практические научные исследования
-                    </li>
-                    <li class="mb-2">
-                        Периодичность выпуска журнала – ежеквартально
-                    </li>
-                    <li class="mb-2">
-                        Языки публикаций: казахский, русский, английский
-                    </li>
-                </ul>
+    <!-- Offer -->
+    <div class="bg-cover " style="background-image: url('/static/images/research.jpg')">
+        <div class="bg-white bg-opacity-80">
+            <div class="py-20 container mx-auto px-5 lg:px-40 block lg:flex">
+                <img src="{% static 'images/logo.png' %}" class="h-48" alt="">
 
-                <a href="" class="inline-block px-6 py-4 rounded-lg bg-blue-500 text-white">Подать статью</a>
+                <div class="ml-10 flex-1">
+                    <h1 class="text-3xl lg:text-5xl mt-5 lg:mt-0 font-bold">
+                        Международный научный журнал "Journal of Science and Research (JSR)"
+                    </h1>
+                    <ul class="my-5 text-gray-900">
+                        <li class="mb-2">
+                            Редакционная коллегия журнала приглашает опубликовать свои научные исследования
+                            и труды в периодическом электронном журнале
+                            «Journal of Science and Research»
+                        </li>
+                        <li class="mb-2">
+                            В журнале публикуются научные статьи фундаментального и
+                            прикладного характера по актуальным вопросам современной науки,
+                            способствуя тем самым распространению научных достижений в интернет
+                            пространстве.
+                        </li>
+                    </ul>
+
+                    <a href=""
+                        class="inline-block px-6 py-3 rounded-lg bg-blue-700 text-white transition-all hover:bg-blue-500">Подать
+                        статью
+                    </a>
+                </div>
+
             </div>
-            
         </div>
     </div>
 
+    <!-- Преимущества -->
+    <div class="bg-gray-50 border-b">
+        <div class="container mx-auto py-10 px-5">
+            <h1 class="text-4xl text-center font-bold mb-5">Преимущества</h1>
+
+            <div class="flex flex-wrap justify-center">
+                <div
+                    class="block max-w-sm m-2 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Авторские права
+                    </h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Все статьи проходят слепое рецензирование и
+                        проверку в системе Антиплагиат.ру</p>
+                </div>
+
+                <div
+                    class="block max-w-sm p-6 m-2 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Сертификация</h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Бесплатная сертификат для автора(-ов) и
+                        благодарность руководителю</p>
+                </div>
+
+                <div
+                    class="block max-w-sm p-6 m-2 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Фиксированная цена
+                    </h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Стоимость публикации — фиксированная цена
+                        (вне зависимости от количества страниц)</p>
+                </div>
+
+                <div
+                    class="block max-w-sm p-6 m-2 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Научная Электронная
+                        Библиотека</h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Все выпуски журнала будут размещены на
+                        основе Лицензионного договора №78-04/2023 в Научной Электронной Библиотеке</p>
+                </div>
+
+                <div
+                    class="block max-w-sm p-6 m-2 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Периодичность</h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Все журналы выпускается ежеквартала. Языки
+                        публикаций будет казахский, русский, английский</p>
+                </div>
+
+                <div
+                    class="block max-w-sm p-6 m-2 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Тематические
+                        направления журнала</h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Педагогические, общественно-социальные,
+                        технические, экономические и юридические науки, информационно-коммуникационные технологии,
+                        теоретические и научно-практические научные исследования</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Выпуски журнала -->
+    <div class="border-b">
+        <div class="container mx-auto px-5 py-10">
+            <h1 class="text-4xl text-center font-bold mb-5">Выпуски журнала</h1>
+
+            <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+
+                <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <a href="#">
+                        <img class="rounded-t-lg" src="https:flowbite.com/docs/images/blog/image-1.jpg" alt="" />
+                    </a>
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Read more
+                            <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <a href="#">
+                        <img class="rounded-t-lg" src="https:flowbite.com/docs/images/blog/image-1.jpg" alt="" />
+                    </a>
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Read more
+                            <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <a href="#">
+                        <img class="rounded-t-lg" src="https:flowbite.com/docs/images/blog/image-1.jpg" alt="" />
+                    </a>
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Read more
+                            <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <a href="#">
+                        <img class="rounded-t-lg" src="https:flowbite.com/docs/images/blog/image-1.jpg" alt="" />
+                    </a>
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Read more
+                            <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-5 text-center">
+                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Подробнее</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Архив журналов -->
+    <div class="bg-gray-50">
+        <div class="container px-5 py-10 mx-auto">
+            <h1 class="text-4xl text-center font-bold mb-5">Об издательстве</h1>
+
+            <div class="block lg:flex items-center justify-center">
+                <img src="{% static 'images/bg-logo.jpeg' %}" class="w-80 mx-auto lg:mx-0" alt="">
+
+                <div class="flex-1 lg:ml-10 max-w-xl text-gray-900">
+                    <h1 class="text-xl font-bold mt-5 lg:mt-0">
+                        Международный электронный научный журнал «Journal of Science and Research»
+                    </h1>
+                    <span class="my-5 block">
+                        Международный электронный научный журнал «Journal of Science and Research»
+                        издается с 2021 г. (зарегистрирован в Комитете информации
+                        Министерства информации и общественного развития Республики
+                        Казахстан. Свидетельство регистрации: № KZ40VPY00067791 от 07.04.2023 г.).
+                    </span>
+                    <span>
+                        Учредитель: ИП Ажар — Образовательный центр «Skillman»
+                    </span>
+
+                    <div class="mt-5">
+                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Подробнее</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
