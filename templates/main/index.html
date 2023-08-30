@@ -1,15 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}
+    Главная - Journal of Science and Research (JSR)
+{% endblock title %}
+
 {% block content %}
 <div>
     <!-- Offer -->
     <div class="bg-cover " style="background-image: url('/static/images/research.jpg')">
         <div class="bg-white bg-opacity-80">
-            <div class="py-20 container mx-auto px-5 lg:px-40 block lg:flex">
-                <img src="{% static 'images/logo.png' %}" class="h-48" alt="">
+            <div class="py-10 lg:py-20 container mx-auto px-5 lg:px-40 block lg:flex">
+                <img src="{% static 'images/logo.png' %}" class="h-48 mx-auto lg:mx-0" alt="">
 
-                <div class="ml-10 flex-1">
+                <div class="lg:ml-10 flex-1">
                     <h1 class="text-3xl lg:text-5xl mt-5 lg:mt-0 font-bold">
                         Международный научный журнал "Journal of Science and Research (JSR)"
                     </h1>
@@ -27,7 +31,7 @@
                         </li>
                     </ul>
 
-                    <a href=""
+                    <a href="{% url 'article' %}"
                         class="inline-block px-6 py-3 rounded-lg bg-blue-700 text-white transition-all hover:bg-blue-500">Подать
                         статью
                     </a>
@@ -38,9 +42,9 @@
     </div>
 
     <!-- Преимущества -->
-    <div class="bg-gray-50 border-b">
+    <div class="bg-gray-50 border-b" id="feature">
         <div class="container mx-auto py-10 px-5">
-            <h1 class="text-4xl text-center font-bold mb-5">Преимущества</h1>
+            <h1 class="text-3xl lg:text-4xl text-center font-bold mb-5">Преимущества</h1>
 
             <div class="flex flex-wrap justify-center">
                 <div
@@ -94,9 +98,9 @@
     </div>
 
     <!-- Выпуски журнала -->
-    <div class="border-b">
+    <div class="border-b" id="archives">
         <div class="container mx-auto px-5 py-10">
-            <h1 class="text-4xl text-center font-bold mb-5">Выпуски журнала</h1>
+            <h1 class="text-3xl lg:text-4xl text-center font-bold mb-5">Выпуски журнала</h1>
 
             <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
 
@@ -175,18 +179,18 @@
             </div>
 
             <div class="mt-5 text-center">
-                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Подробнее</a>
+                <a href="{% url 'publishers' %}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Подробнее</a>
             </div>
         </div>
     </div>
 
-    <!-- Архив журналов -->
-    <div class="bg-gray-50">
+    <!-- Об издательства -->
+    <div class="bg-gray-50" id="about">
         <div class="container px-5 py-10 mx-auto">
-            <h1 class="text-4xl text-center font-bold mb-5">Об издательстве</h1>
+            <h1 class="text-3xl lg:text-4xl text-center font-bold mb-5">Об издательстве</h1>
 
             <div class="block lg:flex items-center justify-center">
-                <img src="{% static 'images/bg-logo.jpeg' %}" class="w-80 mx-auto lg:mx-0" alt="">
+                <img src="{% static 'images/bg-logo.jpeg' %}" class="w-80 mx-auto block rounded-lg lg:mx-0" alt="">
 
                 <div class="flex-1 lg:ml-10 max-w-xl text-gray-900">
                     <h1 class="text-xl font-bold mt-5 lg:mt-0">
@@ -203,7 +207,7 @@
                     </span>
 
                     <div class="mt-5">
-                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Подробнее</a>
+                        <a href="{% url 'about' %}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Подробнее</a>
                     </div>
                     
                 </div>
