@@ -23,10 +23,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_summernote',
     'django_cleanup.apps.CleanupConfig',
+    'crispy_forms',
+    'crispy_tailwind',
 
     'main.apps.MainConfig',
 ]
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
+CRISPY_TEMPLATE_PACK = "tailwind"
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 SILENCED_SYSTEM_CHECKS = ['security.W019']
 
