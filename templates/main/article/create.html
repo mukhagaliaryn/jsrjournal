@@ -8,6 +8,21 @@
 
 {% block content %}
 <div class="mx-auto container px-5 py-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 mb-5">
+        <div class="p-5 mx-2 bg-gray-50 rounded-lg text-center">
+            <h1 class="font-bold mb-2 text-xl">Шаг 1</h1>
+            <span>Знакомство с требованиями</span>
+        </div>
+        <div class="p-5 mx-2 bg-blue-700 rounded-lg text-center text-white">
+            <h1 class="font-bold mb-2 text-xl">Шаг 2</h1>
+            <span>Отправить статью</span>
+        </div>
+        <div class="p-5 mx-2 bg-gray-50 rounded-lg text-center">
+            <h1 class="font-bold mb-2 text-xl">Шаг 3</h1>
+            <span>Оплата</span>
+        </div>
+    </div>
+
     <form class="space-y-6 max-w-2xl mx-auto" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
 
