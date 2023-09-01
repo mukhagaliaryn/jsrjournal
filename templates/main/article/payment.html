@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Оплата - Journal of Science and Research (JSR)
+{% endblock title %}
+
+{% block content %}
+<div class="mx-auto container px-5 py-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 mb-10">
+        <div class="p-5 mx-2 bg-gray-50 rounded-lg text-center">
+            <h1 class="font-bold mb-2 text-xl text-gray-900">Шаг 1</h1>
+            <span class="text-gray-600">Знакомство с требованиями</span>
+        </div>
+        <div class="p-5 mx-2 bg-gray-50 rounded-lg text-center">
+            <h1 class="font-bold mb-2 text-xl text-gray-900">Шаг 2</h1>
+            <span class="text-gray-600">Отправить статью</span>
+        </div>
+        <div class="p-5 mx-2 bg-blue-700 rounded-lg text-center text-white">
+            <h1 class="font-bold mb-2 text-xl">Шаг 3</h1>
+            <span>Оплата</span>
+        </div>
+    </div>
+    
+    <div>
+        <h1 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-5">Способы оплаты</h1>
+        <div>
+            <img src="{% static '/images/payment.png' %}" class="w-[520px] mx-auto" alt="">
+        </div>
+
+        <div class="flex justify-center mt-5">
+            <a href="{% url 'main' %}"
+                class="inline-block px-6 py-3 rounded-lg bg-blue-700 text-white transition-all hover:bg-blue-500 relative overflow-x-hidden">
+                Оплатить и вернуться в главную
+                <span class="flare"></span>
+            </a>
+        </div> 
+    </div>
+
+</div>
+{% endblock content %}

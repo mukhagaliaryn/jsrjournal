@@ -31,12 +31,16 @@ def article_create(request):
         form = ArticleForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('payment')
+            return redirect('pay')
 
     context = {
         'form': form
     }
     return render(request, 'main/article/create.html', context)
+
+
+def article_payment(request):
+    return render(request, 'main/article/payment.html', {})
 
 
 # publishers page
