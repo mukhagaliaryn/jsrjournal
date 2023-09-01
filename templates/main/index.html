@@ -14,10 +14,10 @@
                 <img src="{% static 'images/logo.png' %}" class="h-48 mx-auto lg:mx-0" alt="">
 
                 <div class="lg:ml-10 flex-1">
-                    <h1 class="text-3xl lg:text-5xl mt-5 lg:mt-0 font-bold">
+                    <h1 class="text-3xl lg:text-5xl mt-5 lg:mt-0 text-center md:text-left font-bold">
                         Международный научный журнал "Journal of Science and Research (JSR)"
                     </h1>
-                    <ul class="my-5 text-gray-900">
+                    <ul class="my-5 text-gray-900 text-center md:text-left">
                         <li class="mb-2">
                             Приглашаем Вас опубликовать статьи в международном научном 
                             журнале «Journal of Science and Research (JSR)» 
@@ -31,11 +31,17 @@
                         </li>
                     </ul>
 
-                    <a 
-                        href="{% url 'article' %}"
-                        class="inline-block px-6 py-3 rounded-lg bg-blue-700 text-white transition-all hover:bg-blue-500">Подать
-                        статью
-                    </a>
+
+                    <div class="flex justify-center md:justify-start">
+                        <a 
+                            href="{% url 'article' %}" 
+                            class="inline-block px-6 py-3 rounded-lg bg-blue-700 text-white transition-all hover:bg-blue-500 relative overflow-x-hidden"
+                        >
+                            Подать статью
+                            <span class="flare"></span>
+                        </a>
+                    </div>
+                    
                 </div>
 
             </div>
@@ -120,9 +126,9 @@
         <div class="container mx-auto px-5 py-10">
             <h1 class="text-2xl md:text-3xl xl:text-4xl text-center font-bold mb-10">Выпуски</h1>
 
-            <div class="swiper mySwiper relative">
+            <div class="swiper mySwiper relative md:h-[480px]">
 
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper md:h-[420px]">
                     {% for item in last_publisher %}
                     <div class="swiper-slide bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         <div>
@@ -138,14 +144,11 @@
                             <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">
                                 Выпуск: {{ item.date_created }}
                             </p>
-                            <a href="{{ item.file.url }}" download="true"
-                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <a 
+                                href="{{ item.file.url }}" download="true"
+                                class="text-blue-600 font-medium hover:underline"
+                            >
                                 Скачать PDF
-                                <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 14 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                </svg>
                             </a>
                         </div>
                     </div>
@@ -271,11 +274,11 @@
                         </li>
                     </ul>
 
-                    <div class="mt-5">
-                        <a 
-                            href="{% url 'article' %}"
-                            class="inline-block px-6 py-3 rounded-lg bg-blue-700 text-white transition-all hover:bg-blue-500">Подать
-                            статью
+                    <div class="flex justify-center md:justify-start mt-5">
+                        <a href="{% url 'article' %}"
+                            class="inline-block px-6 py-3 rounded-lg bg-blue-700 text-white transition-all hover:bg-blue-500 relative overflow-x-hidden">
+                            Подать статью
+                            <span class="flare"></span>
                         </a>
                     </div>
                 </div>
@@ -283,12 +286,91 @@
         </div>
     </div>
 
+    <!-- Отзывы -->
+    <div class="bg-gray-50 border-b">
+        <div class="container mx-auto px-5 py-10">
+            <h1 class="text-2xl md:text-3xl xl:text-4xl text-center font-bold mb-10">
+                Отзывы наших клиентов
+            </h1>
+
+            <div class="swiper reviewSwiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide h-96 rounded-lg flex items-center justify-center">
+                        <div class="max-w-2xl text-center">
+                            <p class="text-gray-500 italic">
+                                "Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Voluptate, magni explicabo aliquam modi, praesentium, ad velit
+                                at perspiciatis vitae necessitatibus libero natus? Rem officia 
+                                architecto magni ipsam vitae dolorum qui?"
+                            </p>
+                            <div class="mt-5 text-gray-700">
+                                <div class="text-4xl">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <h1 class="font-bold text-xl">Арман Досжанов</h1>
+                                <span class="">Магистрант КазНУ</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-96 rounded-lg flex items-center justify-center">
+                        <div class="max-w-2xl text-center">
+                            <p class="text-gray-500 italic">
+                                "Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Voluptate, magni explicabo aliquam modi, praesentium, ad velit
+                                at perspiciatis vitae necessitatibus libero natus? Rem officia 
+                                architecto magni ipsam vitae dolorum qui?"
+                            </p>
+                            <div class="mt-5 text-gray-700">
+                                <div class="text-4xl">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <h1 class="font-bold text-xl">Арман Досжанов</h1>
+                                <span class="">Магистрант КазНУ</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-96 rounded-lg flex items-center justify-center">
+                        <div class="max-w-2xl text-center">
+                            <p class="text-gray-500 italic">
+                                "Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Voluptate, magni explicabo aliquam modi, praesentium, ad velit
+                                at perspiciatis vitae necessitatibus libero natus? Rem officia 
+                                architecto magni ipsam vitae dolorum qui?"
+                            </p>
+                            <div class="mt-5 text-gray-700">
+                                <div class="text-4xl">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <h1 class="font-bold text-xl">Арман Досжанов</h1>
+                                <span class="">Магистрант КазНУ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="flex justify-center">
+                <a href="{% url 'article' %}"
+                    class="inline-block px-6 py-3 rounded-lg bg-blue-700 text-white transition-all hover:bg-blue-500 relative overflow-x-hidden">
+                    Оставить отзыв
+                    <span class="flare"></span>
+                </a>
+            </div>  
+        </div>
+    </div>
+
     <!-- Об издательства -->
-    <div class="bg-gray-50" id="about">
+    <div class="" id="about">
         <div class="container px-5 py-10 mx-auto">
             <h1 class="text-2xl md:text-3xl xl:text-4xl text-center font-bold mb-10">Об издательстве</h1>
 
-            <div class="block lg:flex justify-center">
+            <div class="block lg:flex justify-center items-center">
                 <img src="{% static 'images/bg-logo.jpeg' %}" class="w-96 mx-auto block rounded-lg lg:mx-0" alt="">
 
                 <div class="flex-1 lg:ml-10 max-w-xl text-gray-900">

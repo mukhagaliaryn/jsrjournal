@@ -9,55 +9,57 @@
 <div class="mx-auto container px-5 py-10">
     <h1 class="text-3xl md:text-4xl font-bold text-center pb-5">Способы оплаты</h1>
 
-    <div class="max-w-2xl mx-auto py-5 border-t">
-        <h1 class="text-xl font-bold">Стоимость публикации: 6000тг/1100руб</h1>
-
-        <div class="mt-10">
-            <h1 class="text-xl font-bold">Дополнительные услуги</h1>
+    <div class="grid gap-5 grid-cols-1 md:grid-cols-2">
+        <div class="">
+            <h1 class="text-xl font-bold">Стоимость публикации: 6000тг/1100руб</h1>
             
-            <div class="flex justify-between items-center py-4 border-b">
-                <span>Повышение оригинальности текста до необходимого уровня</span>
-                <span>от 1200 тг./стр.</span>
+            <div class="mt-5">
+                <ul class="rounded-lg p-5 bg-blue-100">
+                    <li><strong>БИН (ИИН):</strong> 230340010946</li>
+                    <li><strong>Банк:</strong> АО "Kaspi Bank"</li>
+                    <li><strong>КБе:</strong> 17</li>
+                    <li><strong>Номер счёта:</strong> KZ66722S000023281855</li>
+                </ul>
             </div>
-            <div class="flex justify-between items-center py-4 border-b">
-                <span>Редакторская правка научного текста</span>
-                <span>690 тг./стр.</span>
+
+            <div class="mt-5 bg-red-200 p-5 rounded-lg">
+                <span>
+                    После оплаты не забудьте отправить чек или или фото чека на email: 
+                    <b>info@cajournal.kz</b>. либо на WhatsApp: <b>+77757192273</b>
+                </span>
             </div>
-            <div class="flex justify-between items-center py-4 border-b">
-                <span>Корректорская правка научного текста</span>
-                <span>300 тг./стр.</span>
-            </div>
-            <div class="flex justify-between items-center py-4 border-b">
-                <span>Оформление списка литературы по ГОСТ</span>
-                <span>690 тг./стр.</span>
-            </div>
-            <div class="flex justify-between items-center py-4 border-b">
-                <span class="max-w-lg">Написание аннотации, ключевых слов и оформление 
-                    титула статьи согласно требованиям журнала</span>
-                <span>6000 тг.</span>
+            
+            <div class="mt-5">
+                <h1 class="text-xl font-bold">Дополнительные услуги</h1>
+                
+                <div class="flex justify-between items-center py-4 border-b">
+                    <span>Повышение оригинальности текста до необходимого уровня</span>
+                    <span>от 1200 тг./стр.</span>
+                </div>
+                <div class="flex justify-between items-center py-4 border-b">
+                    <span>Редакторская правка научного текста</span>
+                    <span>690 тг./стр.</span>
+                </div>
+                <div class="flex justify-between items-center py-4 border-b">
+                    <span>Корректорская правка научного текста</span>
+                    <span>300 тг./стр.</span>
+                </div>
+                <div class="flex justify-between items-center py-4 border-b">
+                    <span>Оформление списка литературы по ГОСТ</span>
+                    <span>690 тг./стр.</span>
+                </div>
+                <div class="flex justify-between items-center py-4 border-b">
+                    <span class="max-w-lg">Написание аннотации, ключевых слов и оформление 
+                        титула статьи согласно требованиям журнала</span>
+                    <span>6000 тг.</span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="max-w-2xl mx-auto py-5">
-        <ul class="rounded-lg p-5 bg-blue-100">
-            <li><strong>БИН (ИИН):</strong> 230340010946</li>
-            <li><strong>Банк:</strong> АО "Kaspi Bank"</li>
-            <li><strong>КБе:</strong> 17</li>
-            <li><strong>Номер счёта:</strong> KZ66722S000023281855</li>
-        </ul>
-    </div>
-
-    <div class="">
-        <div>
-            <img src="{% static '/images/payment.png' %}" class="w-[520px] mx-auto" alt="">
-        </div>
-
-        <div class="bg-red-200 max-w-2xl mx-auto p-5 rounded-lg">
-            <span>
-                После оплаты не забудьте отправить чек или или фото чека на email: 
-                <b>info@cajournal.kz</b>. либо на WhatsApp: <b>+77757192273</b>
-            </span>
+        <div class="">
+            <div>
+                <img src="{% static '/images/payment.png' %}" class="w-[520px] mx-auto" alt="">
+            </div>
         </div>
     </div>
 </div>
