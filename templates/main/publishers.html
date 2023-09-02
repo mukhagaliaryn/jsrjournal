@@ -21,12 +21,14 @@
     <div class="my-10 mx-auto container px-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
         {% for item in all_publisher %}
             <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <div>
+                {% if item.poster %}
+                    <img class="rounded-t-lg" src="{{ item.poster.url }}" alt="" />
+                {% else %}
                     <img class="rounded-t-lg" src="{% static '/images/poster.png' %}" alt="" />
-                </div>
+                {% endif %}
                 <div class="p-5">
                     <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">
-                        Выпуск: {{ item.date_created }}
+                        Размещение журнала в электронном виде: {{ item.date_created }}
                     </p>
                     <a href="{{ item.file.url }}" download="true" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Скачать PDF
