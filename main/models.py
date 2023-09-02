@@ -59,15 +59,13 @@ class Publisher(models.Model):
         ('12', 'Национальная безопасность и военное дело'),
     )
 
-    title = models.CharField(verbose_name='Название статьи', max_length=255)
-    poster = models.ImageField(verbose_name='Обложка', upload_to='main/poster/', blank=True, null=True)
     category = models.CharField(verbose_name='Научное направление', max_length=255,
                                 choices=CATEGORY_CHOICE, default=CATEGORY_CHOICE[0][1])
     file = models.FileField(verbose_name='Прикрепить статьи', upload_to='main/publishers/')
     date_created = models.DateField(verbose_name='Публикация выпуска')
 
     def __str__(self):
-        return self.title
+        return self.category
 
     class Meta:
         verbose_name = 'Публикация'

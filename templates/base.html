@@ -286,6 +286,37 @@
         });
 
 
+        var publishers = new Swiper(".publisherSwiper", {
+            slidesPerView: 5,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1
+                },
+                420: {
+                    slidesPerView: 2
+                },
+                769: {
+                    slidesPerView: 3,
+                },
+                1025: {
+                    slidesPerView: 4,
+                },
+                1201: {
+                    slidesPerView: 5,
+                }
+            }
+        });
+
+
         var swiper = new Swiper(".reviewSwiper", {
             loop: true,
             autoplay: {

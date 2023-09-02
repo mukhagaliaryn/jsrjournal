@@ -8,7 +8,7 @@ from django.core.mail import EmailMessage
 
 # Main page
 def index(request):
-    last_publisher = get_list_or_404(Publisher)[:5]
+    last_publisher = get_list_or_404(Publisher)[:10]
     last_reviews = get_list_or_404(Review)[:3]
     form = ReviewForm()
 

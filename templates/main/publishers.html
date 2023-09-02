@@ -22,15 +22,9 @@
         {% for item in all_publisher %}
             <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <div>
-                    <img class="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
+                    <img class="rounded-t-lg" src="{% static '/images/poster.png' %}" alt="" />
                 </div>
                 <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">{{ item.title }}</h5>
-                    </a>
-                    <p class="mb-2 text-sm font-normal text-gray-700 dark:text-gray-400">
-                        {{ item.get_category_display }}
-                    </p>
                     <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">
                         Выпуск: {{ item.date_created }}
                     </p>
