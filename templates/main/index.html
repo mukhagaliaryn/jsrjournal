@@ -12,7 +12,7 @@
     <!-- Offer -->
     <div class="relative">
         <video 
-            src="{% static 'video/video.mp4' %}" 
+            src="{% static 'video/video2.mp4' %}" 
             autoplay loop muted
             class="absolute top-0 left-0 block w-screen h-full"
             style="object-fit: cover;"
@@ -20,10 +20,8 @@
         </video>
         
         <div class="bg-white bg-opacity-50 relative">
-            <div class="py-10 lg:py-20 container mx-auto px-5 lg:px-40 block lg:flex">
-                <img src="{% static 'images/logo.png' %}" class="h-96 mx-auto lg:mx-0" alt="">
-
-                <div class="lg:ml-10 flex-1">
+            <div class="lg:py-20 container px-5 lg:px-40 block lg:flex">
+                <div>
                     <h1 class="text-3xl lg:text-5xl mt-5 lg:mt-0 text-center md:text-left font-bold">
                         Международный научный журнал "Journal of Science and Research (JSR)"
                     </h1>
@@ -393,7 +391,7 @@
         <div class="container px-5 py-10 mx-auto">
             <h1 class="text-2xl md:text-3xl xl:text-4xl text-center font-bold mb-10 text-gray-900">Об издательстве</h1>
 
-            <div class="block lg:flex justify-center">
+            <div class="block lg:flex justify-center items-center">
                 <img src="{% static 'images/bg-logo.jpeg' %}" class="shadow w-96 mx-auto block rounded-lg lg:mx-0" alt="">
 
                 <div class="flex-1 lg:ml-10 max-w-xl text-gray-900">
@@ -423,43 +421,50 @@
 
             <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
 
-                <div class="flex-1 bg-gray-100 rounded-xl h-96 flex justify-center items-center">
+                <div class="bg-gray-100 rounded-xl flex justify-center items-center">
                     <h1 class="text-2xl text-gray-300">Местоположение сайта</h1>
                 </div>
-                
-                <ul class="md:ml-10 text-gray-600">
-                    <li class="mb-2">
-                        <strong class="mr-2">Наименование организации: </strong>
+
+                <ul class="md:ml-10 text-gray-600 ">
+                    <li class="py-4 border-b flex items-center">
+                        <i class="fa-solid fa-building"></i>
+                        <strong class="mx-2">Наименование организации: </strong>
                         <span>ТОО "ST.KZ"</span>
                     </li>
 
-                    <li class="mb-2">
-                        <strong class="mr-2">Время работы: </strong>
+                    <li class="py-4 border-b items-center">
+                        <i class="fa-solid fa-clock"></i>
+                        <strong class="mx-2">Время работы: </strong>
                         <span>с 9.00 до 18.00 без обеда и выходных</span>
                     </li>
 
-                    <li class="mb-2">
-                        <strong class="mr-2">Адрес редакции: </strong>
-                        <span>г.Астана</span>
+                    <li class="py-4 border-b flex items-center">
+                        <i class="fa-solid fa-address-book"></i>
+                        <strong class="mx-2">Адрес редакции: </strong>
+                        <span>г. Астана</span>
                     </li>
 
-                    <li class="mb-2">
-                        <strong class="mr-2">Телефон редакции: </strong>
+                    <li class="py-4 border-b flex items-center">
+                        <i class="fa-solid fa-phone"></i>
+                        <strong class="mx-2">Телефон редакции: </strong>
                         <a href="#" class="text-blue-700 underline">+7 (775) 719-2273</a>
                     </li>
 
-                    <li class="mb-2">
-                        <strong class="mr-2">WhatsApp: </strong>
+                    <li class="py-4 border-b flex items-center">
+                        <i class="fa-brands fa-square-whatsapp"></i>
+                        <strong class="mx-2">WhatsApp: </strong>
                         <a href="https://wa.me/+77757192273" class="text-blue-700 underline">+7 (775) 719-2273</a>
                     </li>
 
-                    <li class="mb-2">
-                        <strong class="mr-2">Telegram: </strong>
+                    <li class="py-4 border-b flex items-center">
+                        <i class="fa-brands fa-telegram"></i>
+                        <strong class="mx-2">Telegram: </strong>
                         <a href="#" class="text-blue-700 underline">jsrjournal</a>
                     </li>
 
-                    <li class="mb-2">
-                        <strong class="mr-2">Адрес веб-сайта: </strong>
+                    <li class="py-4 border-b flex items-center">
+                        <i class="fa-solid fa-globe"></i>
+                        <strong class="mx-2">Адрес веб-сайта: </strong>
                         <a href="https://jsrjournal.kz" class="text-blue-700 underline">www.jsrjournal.kz</a>
                     </li>
                 </ul>
