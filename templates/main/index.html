@@ -10,8 +10,16 @@
 {% block content %}
 <div>
     <!-- Offer -->
-    <div class="bg-cover " style="background-image: url('/static/images/research.jpg')">
-        <div class="bg-white bg-opacity-80">
+    <div class="relative">
+        <video 
+            src="{% static 'video/video.mp4' %}" 
+            autoplay loop muted
+            class="absolute top-0 left-0 block w-screen h-full"
+            style="object-fit: cover;"
+        >
+        </video>
+        
+        <div class="bg-white bg-opacity-50 relative">
             <div class="py-10 lg:py-20 container mx-auto px-5 lg:px-40 block lg:flex">
                 <img src="{% static 'images/logo.png' %}" class="h-96 mx-auto lg:mx-0" alt="">
 
@@ -47,7 +55,6 @@
                     </div>
                     
                 </div>
-
             </div>
         </div>
     </div>
