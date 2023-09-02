@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div class="p-5 mx-2 rounded-lg flex justify-center items-center text-white bg-blue-700">
+        <div class="p-5 mx-2 rounded-lg flex justify-center items-center text-white bg-blue-700 overflow-x-hidden relative">
             <div class="text-4xl mr-5">
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>
@@ -38,13 +38,45 @@
                 <h1 class="font-bold text-xl">Шаг 3</h1>
                 <span">Оплата</span>
             </div>
+            <div class="flare"></div>
         </div>
     </div>
     
     <div>
         <h1 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-5">Способы оплаты</h1>
-        <div>
+        <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="">
+                <div class="rounded-lg p-10 text-center bg-gray-50">
+                    <h1 class="text-2xl font-bold mb-5">Зарубежные авторы (СНГ)</h1>
+                    <p class="text-gray-600">
+                        Вы можете оплатить орг.взнос (в зависимости от категории) 
+                        переводом на карту (реквизиты будут высланы после принятия 
+                        статьи к публикации)
+                    </p>
+                </div>
+            </div>
+            
             <img src="{% static '/images/payment.png' %}" class="w-[520px] mx-auto" alt="">
+            
+            <div>
+                <ul class="rounded-lg p-10 bg-gray-50">
+                    <h1 class="text-2xl font-bold mb-5">Частные организации</h1>
+                    
+                    <li><strong>ТОО:</strong> ST.KZ</li>
+                    <li><strong>БИН (ИИН):</strong> 230340010946</li>
+                    <li><strong>Банк:</strong> АО "Kaspi Bank"</li>
+                    <li><strong>КБе:</strong> 17</li>
+                    <li><strong>Номер счёта:</strong> KZ66722S000023281855</li>
+                    <li><strong>E-mail:</strong> info@cajournal.kz</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="my-5 bg-red-200 p-5 rounded-lg max-w-xl mx-auto">
+            <span>
+                После оплаты не забудьте отправить чек или или фото чека на email: 
+                <b>info@cajournal.kz</b>. либо на WhatsApp: <b>+77757192273</b>
+            </span>
         </div>
 
         <div class="flex justify-center mt-5">

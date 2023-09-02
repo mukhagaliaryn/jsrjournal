@@ -8,7 +8,7 @@
 {% block content %}
 <div class="mx-auto container px-5 py-10">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-2 mb-10">
-        <div class="p-5 mx-2 bg-blue-700 rounded-lg flex justify-center items-center text-white">
+        <div class="p-5 mx-2 bg-blue-700 rounded-lg flex justify-center items-center text-white overflow-x-hidden relative">
             <div class="text-5xl mr-5">
                 <i class="fa-solid fa-handshake"></i>
             </div>
@@ -17,6 +17,8 @@
                 <h1 class="font-bold text-xl">Шаг 1</h1>
                 <span>Знакомство с требованиями</span>
             </div>
+
+            <div class="flare"></div>
         </div>
         <div class="p-5 mx-2 bg-gray-50 rounded-lg flex justify-center items-center">
             <div class="text-4xl mr-5 text-gray-600">
@@ -45,7 +47,7 @@
         <div id="accordion-color" data-accordion="collapse"
             data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white"
         >
-            <h2 id="accordion-color-heading-1">
+            <!-- <h2 id="accordion-color-heading-1">
                 <button type="button"
                     class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-600 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
                     data-accordion-target="#accordion-color-body-1" aria-expanded="true"
@@ -95,12 +97,12 @@
                         <li>Оплата производиться только после принятия статьи к публикации</li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
 
             <h2 id="accordion-color-heading-3">
                 <button type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
-                    data-accordion-target="#accordion-color-body-3" aria-expanded="false"
+                    class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-600 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+                    data-accordion-target="#accordion-color-body-3" aria-expanded="true"
                     aria-controls="accordion-color-body-3">
                     <span>Рецензирование</span>
                     <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
@@ -171,70 +173,7 @@
                     </div>
                 </div>
             </div>
-            <h2 id="accordion-color-heading-2">
-                <button type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-600 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
-                    data-accordion-target="#accordion-color-body-5" aria-expanded="false"
-                    aria-controls="accordion-color-body-5">
-                    <span>До основного текста статьи</span>
-                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 5 5 1 1 5" />
-                    </svg>
-                </button>
-            </h2>
-            <div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-2">
-                <div class="text-gray-600 p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                    <div>
-                        <span class="font-bold">
-                            Индекс УДК:
-                        </span>
-                        <span>
-                            присваивается индекс УДК, строчные буквы, шрифт – Times New Roman ,12, интервал – 1.15, выравнивание по левому
-                            краю.
-                        </span>
-                        <span>
-                            УДК (Универсальная десятичная классификация) - система классификации информации, используется для систематизации
-                            произведений науки, литературы и искусства, периодической печати, различных видов документов и организации
-                            картотек. Индекс можно получить в библиотеке учебного заведения или найти через Интернет на сайте: <a
-                                class="text-blue-700 underline" href="https://teacode.com/online/udc/">https://teacode.com/online/udc/</a>
-                        </span>
-                    </div>
-                    
-                    <div class="mt-2">
-                        <span class="font-bold">
-                            Информация об авторах:
-                        </span>
-                        <span>
-                            выравнивание по правому полю, жирный курсив: 1 строка - фамилии и инициалы автора, ученая степень, ученое
-                            звание, 2 строка – должность, наименование организации, 3 строка - страна, город. Если у вас больше одного
-                            автора - порядок сохраняется для каждого автора. *Если вы хотите указать научного руководителя, то это следует
-                            сделать после перечисления всех авторов. Написав: Научный руководитель: Ф.И.О.
-                        </span>
-                    </div>
-                    
-                    <div class="mt-2">
-                        <span class="font-bold">
-                            Заголовок (название) статьи:
-                        </span>
-                        <span>
-                            ниже через один интервал заголовок статьи прописными буквами, шрифт – полужирный, Times New Roman 12, интервал –
-                            1.15, выравнивание по центру.
-                        </span>
-                    </div>
-                    
-                    <div class="mt-2">
-                        <span class="font-bold">
-                            Аннотация и ключевые слова:
-                        </span>
-                        <span>
-                            через отступ в один интервал пишется аннотация и ключевые слова, шрифт – курсив, Times New Roman 12, интервал –
-                            1.15, выравнивание по ширине.
-                        </span>
-                    </div>
-                </div>
-            </div>
+            
             <h2 id="accordion-color-heading-3">
                 <button type="button"
                     class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-600 border border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"

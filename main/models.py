@@ -30,7 +30,7 @@ class Article(models.Model):
     phone = models.CharField(verbose_name='Телефон контактного лица', max_length=255)
     category = models.CharField(verbose_name='Научное направление', max_length=255,
                                 choices=CATEGORY_CHOICE, default=CATEGORY_CHOICE[0][1])
-    item = models.CharField(verbose_name='Количество необходимых печатных экземпляров', max_length=20,
+    item = models.CharField(verbose_name='Количество авторов', max_length=20,
                             choices=ITEM_CHOICE, default=ITEM_CHOICE[0][1])
     file = models.FileField(verbose_name='Прикрепить статьи', upload_to='main/articles/')
 

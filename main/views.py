@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_list_or_404
 from main.forms import ReviewForm, ArticleForm
 from main.models import Publisher, Review
@@ -55,7 +54,7 @@ def article_create(request):
                 Email контактного лица: {email}
                 Телефон: {phone}
                 Научное направление: {category}
-                Количество необходимых печатных экземпляров: {item}
+                Количество авторов: {item}
             """
             mail = EmailMessage(subject, message, email, [settings.EMAIL_HOST_USER])
             mail.attach(file.name, file.read(), file.content_type)
