@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
+
 
 {% block title %}
     Главная - Journal of Science and Research (JSR)
@@ -29,8 +31,10 @@
                             способствуя тем самым распространению научных достижений в интернет
                             пространстве.
                         </li>
+                        <li class="mb-2">
+                            Журнал  издается 2 раза в месяц.
+                        </li>
                     </ul>
-
 
                     <div class="flex justify-center md:justify-start">
                         <a 
@@ -53,12 +57,15 @@
         <div class="container mx-auto py-10 px-5">
             <h1 class="text-2xl md:text-3xl xl:text-4xl text-center font-bold mb-10">Ключевые отличия журнала</h1>
 
-            <div class="swiper mySwiper h-64 relative">
-                <div class="swiper-wrapper h-48">
+            <div class="swiper mySwiper h-72 relative">
+                <div class="swiper-wrapper h-56">
                     <div class="swiper-slide">
                         <div
-                            class="h-full line-clamp-4 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            class="h-full text-center line-clamp-4 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            <div class="text-2xl text-blue-700 text-center mb-2">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <h5 class="mb-2 text-xl font-bold tracking-tight text-blue-700">
                                 Рецензия – в течение трех дней
                             </h5>
                             <p class="font-normal text-gray-700 dark:text-gray-400">
@@ -69,8 +76,11 @@
                     </div>
                     <div class="swiper-slide">
                         <div
-                            class="h-full line-clamp-4 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Выходные данные</h5>
+                            class="h-full text-center line-clamp-4 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            <div class="text-2xl text-blue-700 text-center mb-2">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <h5 class="mb-2 text-xl font-bold tracking-tight text-blue-700">Выходные данные</h5>
                             <p class="font-normal text-gray-700 dark:text-gray-400">
                                 Выходные данные статьи – на сайте журнала в день оплаты публикации.
                             </p>
@@ -78,8 +88,11 @@
                     </div>
                     <div class="swiper-slide">
                         <div
-                            class="h-full line-clamp-4 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Выпуск журнала быстро
+                            class="h-full text-center line-clamp-4 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            <div class="text-2xl text-blue-700 text-center mb-2">
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </div>
+                            <h5 class="mb-2 text-xl font-bold tracking-tight text-blue-700">Выпуск журнала быстро
                             </h5>
                             <p class="font-normal text-gray-700 dark:text-gray-400">
                                 Выпуск журнала публикуется на сайте через 15 дней
@@ -89,8 +102,11 @@
                     </div>
                     <div class="swiper-slide">
                         <div
-                            class="h-full line-clamp-4 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            class="h-full text-center line-clamp-4 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            <div class="text-2xl text-blue-700 text-center mb-2">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <h5 class="mb-2 text-xl font-bold tracking-tight text-blue-700">
                                 Сертификация
                             </h5>
                             <p class="font-normal text-gray-700 dark:text-gray-400">
@@ -100,8 +116,11 @@
                     </div>
                     <div class="swiper-slide">
                         <div
-                            class="h-full line-clamp-4 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            class="h-full text-center line-clamp-4 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            <div class="text-2xl text-blue-700 text-center mb-2">
+                                <i class="fa-solid fa-tag"></i>
+                            </div>
+                            <h5 class="mb-2 text-xl font-bold tracking-tight text-blue-700">
                                 Фиксированная цена
                             </h5>
                             <p class="font-normal text-gray-700 dark:text-gray-400">
@@ -112,19 +131,138 @@
                 </div>
 
                 <div class="swiper-pagination"></div>
-                <div class="swiper-button-next absolute top-24"></div>
-                <div class="swiper-button-prev absolute top-24"></div>
+                <div class="swiper-button-next absolute top-26"></div>
+                <div class="swiper-button-prev absolute top-26"></div>
             </div>
         </div>
-
-
-
     </div>
 
+
+    <!-- Основные направления (тематика) -->
+    <div class="border-b bg-gray-50">
+        <div class="container px-5 py-10 mx-auto">
+            <h1 class="text-2xl md:text-3xl xl:text-4xl text-center font-bold mb-10">Основные направления</h1>
+
+            <div class="block lg:flex justify-center">
+                <img src="{% static 'images/certificate.jpeg' %}" class="h-96 mx-auto mb-10 block rounded-lg lg:mx-0 lg:mb-0" alt="">
+
+                <div class="flex-1 lg:ml-20 text-gray-900">
+                    <ul class="space-y-1 text-gray-600 list-inside flex flex-wrap items-start">
+                        <li class="flex items-center px-4 py-2 rounded-lg bg-white border mr-2 mb-2">
+                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            Педагогические науки
+                        </li>
+                        <li class="flex items-center px-4 py-2 rounded-lg bg-white border mr-2 mb-2">
+                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            Искусство и гуманитарные науки
+                        </li>
+                        <li class="flex items-center px-4 py-2 rounded-lg bg-white border mr-2 mb-2">
+                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            Социальные науки, журналистика и информация
+                        </li>
+                        <li class="flex items-center px-4 py-2 rounded-lg bg-white border mr-2 mb-2">
+                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            Бизнес, управление и право
+                        </li>
+                        <li class="flex items-center px-4 py-2 rounded-lg bg-white border mr-2 mb-2">
+                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            Естественные науки, математика и статистика
+                        </li>
+                        <li class="flex items-center px-4 py-2 rounded-lg bg-white border mr-2 mb-2">
+                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            Информационно-коммуникационные технологии
+                        </li>
+                        <li class="flex items-center px-4 py-2 rounded-lg bg-white border mr-2 mb-2">
+                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            Инженерные, обрабатывающие и строительные отрасли
+                        </li>
+                        <li class="flex items-center px-4 py-2 rounded-lg bg-white border mr-2 mb-2">
+                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            Сельское хозяйство и биоресурсы
+                        </li>
+                        <li class="flex items-center px-4 py-2 rounded-lg bg-white border mr-2 mb-2">
+                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            Ветеринария
+                        </li>
+                        <li class="flex items-center px-4 py-2 rounded-lg bg-white border mr-2 mb-2">
+                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            Здравоохранение
+                        </li>
+                        <li class="flex items-center px-4 py-2 rounded-lg bg-white border mr-2 mb-2">
+                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            Услуги
+                        </li>
+                        <li class="flex items-center px-4 py-2 rounded-lg bg-white border mr-2 mb-2">
+                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            Национальная безопасность и военное дело
+                        </li>
+                    </ul>
+
+                    <div class="flex justify-center md:justify-start mt-5">
+                        <a href="{% url 'article' %}"
+                            class="inline-block px-6 py-3 rounded-lg bg-blue-700 text-white transition-all hover:bg-blue-500 relative overflow-x-hidden">
+                            Подать статью
+                            <span class="flare"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Выпуски журнала -->
-    <div class="border-b bg-gray-50" id="archives">
+    <div class="border-b" id="archives">
         <div class="container mx-auto px-5 py-10">
-            <h1 class="text-2xl md:text-3xl xl:text-4xl text-center font-bold mb-10">Выпуски</h1>
+            <h1 class="text-2xl md:text-3xl xl:text-4xl text-center font-bold mb-10">Последные выпуски</h1>
 
             <div class="swiper mySwiper relative md:h-[480px]">
 
@@ -166,128 +304,8 @@
         </div>
     </div>
 
-    <!-- Основные направления (тематика) -->
-    <div class="border-b">
-        <div class="container px-5 py-10 mx-auto">
-            <h1 class="text-2xl md:text-3xl xl:text-4xl text-center font-bold mb-10">Основные направления</h1>
-
-            <div class="block lg:flex justify-center items-center">
-                <img src="{% static 'images/bg-logo.jpeg' %}" class="w-96 mx-auto block rounded-lg lg:mx-0" alt="">
-
-                <div class="flex-1 lg:ml-20 max-w-xl text-gray-900">
-                    <ul class="space-y-1 text-gray-500 list-inside">
-                        <li class="flex items-center">
-                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                            </svg>
-                            Педагогические науки
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                            </svg>
-                            Искусство и гуманитарные науки
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                            </svg>
-                            Социальные науки, журналистика и информация
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                            </svg>
-                            Бизнес, управление и право
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                            </svg>
-                            Естественные науки, математика и статистика
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                            </svg>
-                            Информационно-коммуникационные технологии
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                            </svg>
-                            Инженерные, обрабатывающие и строительные отрасли
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                            </svg>
-                            Сельское хозяйство и биоресурсы
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                            </svg>
-                            Ветеринария
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                            </svg>
-                            Здравоохранение
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                            </svg>
-                            Услуги
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                            </svg>
-                            Национальная безопасность и военное дело
-                        </li>
-                    </ul>
-
-                    <div class="flex justify-center md:justify-start mt-5">
-                        <a href="{% url 'article' %}"
-                            class="inline-block px-6 py-3 rounded-lg bg-blue-700 text-white transition-all hover:bg-blue-500 relative overflow-x-hidden">
-                            Подать статью
-                            <span class="flare"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Отзывы -->
-    <div class="bg-gray-50 border-b">
+    <div class="bg-gray-50 border-b" id="review">
         <div class="container mx-auto px-5 py-10">
             <h1 class="text-2xl md:text-3xl xl:text-4xl text-center font-bold mb-10">
                 Отзывы наших клиентов
@@ -295,60 +313,22 @@
 
             <div class="swiper reviewSwiper">
                 <div class="swiper-wrapper">
-
-                    <div class="swiper-slide h-96 rounded-lg flex items-center justify-center">
-                        <div class="max-w-2xl text-center">
-                            <p class="text-gray-500 italic">
-                                "Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Voluptate, magni explicabo aliquam modi, praesentium, ad velit
-                                at perspiciatis vitae necessitatibus libero natus? Rem officia 
-                                architecto magni ipsam vitae dolorum qui?"
-                            </p>
-                            <div class="mt-5 text-gray-700">
-                                <div class="text-4xl">
-                                    <i class="fa-solid fa-user"></i>
+                    {% for review in last_reviews %}
+                        <div class="swiper-slide h-96 rounded-lg flex items-center justify-center">
+                            <div class="max-w-2xl text-center">
+                                <p class="text-gray-500 italic">
+                                    "{{ review.body }}"
+                                </p>
+                                <div class="mt-5 text-gray-700">
+                                    <div class="text-4xl">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                    <h1 class="font-bold text-xl">{{ review.full_name }}</h1>
+                                    <span class="">{{ review.staff }}</span>
                                 </div>
-                                <h1 class="font-bold text-xl">Арман Досжанов</h1>
-                                <span class="">Магистрант КазНУ</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="swiper-slide h-96 rounded-lg flex items-center justify-center">
-                        <div class="max-w-2xl text-center">
-                            <p class="text-gray-500 italic">
-                                "Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Voluptate, magni explicabo aliquam modi, praesentium, ad velit
-                                at perspiciatis vitae necessitatibus libero natus? Rem officia 
-                                architecto magni ipsam vitae dolorum qui?"
-                            </p>
-                            <div class="mt-5 text-gray-700">
-                                <div class="text-4xl">
-                                    <i class="fa-solid fa-user"></i>
-                                </div>
-                                <h1 class="font-bold text-xl">Арман Досжанов</h1>
-                                <span class="">Магистрант КазНУ</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide h-96 rounded-lg flex items-center justify-center">
-                        <div class="max-w-2xl text-center">
-                            <p class="text-gray-500 italic">
-                                "Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Voluptate, magni explicabo aliquam modi, praesentium, ad velit
-                                at perspiciatis vitae necessitatibus libero natus? Rem officia 
-                                architecto magni ipsam vitae dolorum qui?"
-                            </p>
-                            <div class="mt-5 text-gray-700">
-                                <div class="text-4xl">
-                                    <i class="fa-solid fa-user"></i>
-                                </div>
-                                <h1 class="font-bold text-xl">Арман Досжанов</h1>
-                                <span class="">Магистрант КазНУ</span>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
 
                 <div class="swiper-button-next"></div>
@@ -370,7 +350,8 @@
                 class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
                 <div class="relative w-full max-w-2xl max-h-full">
                     <!-- Modal content -->
-                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <form method="POST" class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        {% csrf_token %}
                         <!-- Modal header -->
                         <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
@@ -389,26 +370,18 @@
                         </div>
                         <!-- Modal body -->
                         <div class="p-6 space-y-6">
-                            <div class="mb-6">
-                                <label for="base-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ФИО</label>
-                                <input type="text" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            </div>
-
-                            <div class="mb-6">
-                                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ваше отзыв</label>
-                                <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Напишите свои отзыв..."></textarea>
-                            </div>
+                            {{ form|crispy }}
                         </div>
                         <!-- Modal footer -->
                         <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                            <button data-modal-hide="defaultModal" type="button"
+                            <button
                                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 Отправить
                             </button>
                             <button data-modal-hide="defaultModal" type="button"
                                 class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Отмена</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>

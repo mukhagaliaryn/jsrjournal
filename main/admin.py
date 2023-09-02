@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Article, Publisher
+from .models import Article, Publisher, Review
 
 
 class ArticleAdmin(admin.ModelAdmin):
@@ -14,5 +14,11 @@ class PublisherAdmin(admin.ModelAdmin):
     list_filter = ('category', )
 
 
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = ('full_name', 'staff', 'date_created')
+
+
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Publisher, PublisherAdmin)
+admin.site.register(Review, ReviewAdmin)
+
