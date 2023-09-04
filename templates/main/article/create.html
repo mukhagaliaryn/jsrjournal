@@ -52,11 +52,19 @@
             {{ form|crispy }}
         </div>
 
-        <div class="flex items-center">
+        <div class="flex items-center mb-5">
             <input type="checkbox" id="confirm" class="mr-2 text-xl" required>
             <label for="confirm" class="text-gray-600 cursor-pointer block">
                 Я подтверждаю, что все авторы и/или научные руководители, указанные в статье,
                 ознакомились с ее содержанием и дали свое согласие 
+            </label>
+        </div>
+        <div class="flex items-center">
+            <input type="checkbox" id="confirm-2" class="mr-2 text-xl" required>
+            <label for="confirm-2" class="text-gray-600 cursor-pointer block">
+                Авторы статей несут ответственность за содержание статей и за сам факт 
+                их публикации. Редакция не всегда разделяет мнения авторов и не 
+                несет ответственности за недостоверность публикуемых данных 
             </label>
         </div>
         

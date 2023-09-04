@@ -55,6 +55,12 @@
                 left: 150%;
             }
         }
+
+        .bg-ads {
+            background-image: url('{% static "/images/ads.jpg" %}');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
 
@@ -109,9 +115,9 @@
                         <img src="{% static '/images/logo-fill.png' %}" class="w-56 mr-1" alt="JSR Logo" />
                     </a>
 
-                    <div class="bg-gray-100 hidden lg:flex h-28 justify-center items-center w-1/2 rounded-lg">
-                        <h1 class="text-2xl text-gray-300">Ads.</h1>
-                    </div>
+                    <a href="#" class="bg-gray-100 hidden lg:flex h-36 w-1/2 rounded-lg overflow-hidden">
+                        <div class="bg-ads w-full h-full"></div>
+                    </a>
 
                     <div class="text-sm text-gray-700 hidden md:block">
                         <div class="flex items-center">
@@ -132,7 +138,7 @@
                         <div class="flex items-center">
                             <i class="fa-brands fa-telegram text-xl"></i>
                             <span class="mx-2">Telegram:</span>
-                            <a href="#" class="text-blue-700 underline">jsrjournal</a>
+                            <a href="https://t.me/jsrjournal" class="text-blue-700 underline">jsrjournal</a>
                         </div>
                     </div>
                 </div>
@@ -163,7 +169,7 @@
                         <a href="mailto:info.jsrjournal@gmail.com" class="text-xl text-gray-700">
                             <i class="fa-solid fa-message"></i>
                         </a>
-                        <a href="#" class="text-xl text-gray-700">
+                        <a href="https://t.me/jsrjournal" class="text-xl text-gray-700">
                             <i class="fa-brands fa-telegram"></i>
                         </a>
                     </div>
