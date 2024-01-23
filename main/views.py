@@ -81,3 +81,15 @@ def publishers(request):
 # about page
 def about(request):
     return render(request, 'main/about.html', {})
+
+
+def edit_task(request):
+    return render(request, 'main/editer/task.html', {})
+
+
+def edit_target(request):
+    return render(request, 'main/editer/target.html', {})
+
+
+def edit_compound(request):
+    return render(request, 'main/editer/compound.html', {})
